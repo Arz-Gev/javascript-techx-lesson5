@@ -1,0 +1,92 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+script {
+  display: none;
+}
+
+link {
+  display: none;
+}
+
+title {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.heading {
+  margin: 1rem 0;
+}
+
+.main-container {
+  width: 25rem;
+  height: 25rem;
+  flex-direction: column;
+  background-color: rgb(187, 184, 184);
+  border: white 1px solid;
+}
+
+.button-container {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.fetch-button {
+  width: 8rem;
+  height: 4rem;
+  border: 1px white solid;
+  background-color: rgb(187, 184, 184);
+  cursor: pointer;
+}
+
+.fetch-button:hover {
+  border-width: 3px;
+}
+
+.fetch-button:active {
+  filter: brightness(1.5);
+  color: gray;
+}
+
+.display-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(187, 184, 184);
+  margin-top: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  border: white 1px solid;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.display {
+  border-top: white 1px solid;
+  padding: 1.5rem;
+  width: calc(100% - 3.1rem);
+  height: calc(100% - 3.1rem);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.status {
+  width: 10rem;
+  height: 3rem;
+  justify-content: start;
+  padding: 0 0.5rem;
+}
