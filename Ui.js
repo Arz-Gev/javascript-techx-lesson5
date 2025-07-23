@@ -11,10 +11,10 @@ export class Ui {
         statusBar.textContent = "status:";
         break;
       case Ui.loading:
-        statusBar.textContent = "status: is loading... 🔄";
+        statusBar.textContent = "status: loading... 🔄";
         break;
       case Ui.loaded:
-        statusBar.textContent = "status: is loaded ✅";
+        statusBar.textContent = "status: loaded ✅";
         break;
       case Ui.failed:
         statusBar.textContent = "status: No users 😭";

@@ -24,7 +24,7 @@ title {
 }
 
 html {
-  font-size: 16px;
+  font-size: 24px;
   width: 100vw;
   height: 100vh;
   background-color: white;
@@ -36,7 +36,7 @@ html {
 
 .main-container {
   width: 25rem;
-  height: 25rem;
+  height: 28rem;
   flex-direction: column;
   background-color: rgb(187, 184, 184);
   border: white 1px solid;
@@ -53,10 +53,12 @@ html {
   border: 1px white solid;
   background-color: rgb(187, 184, 184);
   cursor: pointer;
+  transition-duration: 50ms;
 }
 
 .fetch-button:hover {
   border-width: 3px;
+  transform: scale(1.05);
 }
 
 .fetch-button:active {
@@ -73,15 +75,17 @@ html {
   justify-content: space-between;
   align-items: start;
   border: white 1px solid;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0;
 }
 
 .display {
   border-top: white 1px solid;
-  padding: 1.5rem;
-  width: calc(100% - 3.1rem);
-  height: calc(100% - 3.1rem);
+  padding: 0.75rem;
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
   border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .status {
@@ -90,4 +94,32 @@ html {
   justify-content: start;
   align-items: center;
   padding: 0 0.5rem;
+}
+
+.display-row {
+  border: white 1px solid;
+  width: 100%;
+  height: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 50ms;
+}
+
+.display-row:hover {
+  transform: scale(1.04);
+  border-width: 3px;
+}
+
+.reset-container {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-button {
+  width: calc(100% - 1.5rem);
+  height: 2.083rem;
 }
