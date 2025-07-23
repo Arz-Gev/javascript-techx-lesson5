@@ -72,36 +72,3 @@ function failed(error) {
   Ui.Status(Ui.failed);
   console.log("ABOBA");
 }
-
-// (async () => {
-
-//   const API_URL = "https://jsonplaceholder.typicode.com/users/1";
-//   let outsideData;
-
-//   fetch(API_URL)
-//     .then((res) => {
-//       console.log(res);
-//       return res.json();
-//     })
-//     .then((data) => {
-//       outsideData = data;
-//       console.log("fetch().then()", data);
-//     });
-
-//   console.log("outsideData", outsideData);
-//   console.log("\n");
-
-//   let outsideDataAsyncAwait;
-//   async function fetchData() {
-//     try {
-//       const res = await fetch(API_URL);
-//       const data = await res.json();
-//       outsideDataAsyncAwait = data;
-//     } catch (error) {
-//       throw error;
-//     }
-//   }
-
-//   await fetchData();
-//   console.log("outsideDataAsyncAwait", outsideDataAsyncAwait);
-// })();
