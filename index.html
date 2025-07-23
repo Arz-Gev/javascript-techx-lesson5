@@ -11,16 +11,26 @@
     <div class="main-container">
       <p class="heading">PRESS ANY TO PROCESS FETCH</p>
       <div class="button-container">
-        <button class="fetch-button" type="button" id="fetch-with-header">
+        <button
+          name="fail"
+          class="fetch-button"
+          type="button"
+          id="fetch-with-header"
+        >
           WITH HEADER
         </button>
         <p>- OR -</p>
-        <button class="fetch-button" type="button" id="fetch-without-header">
+        <button
+          name="succsess"
+          class="fetch-button"
+          type="button"
+          id="fetch-without-header"
+        >
           WITHOUT HEADER
         </button>
       </div>
       <div class="display-container">
-        <p class="status">status:</p>
+        <p class="status" id="status-bar">status:</p>
         <div class="display" id="display"></div>
       </div>
     </div>
