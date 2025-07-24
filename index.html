@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <p class="heading">PRESS ANY TO PROCESS FETCH</p>
+      <div class="button-container">
+        <button
+          name="fail"
+          class="fetch-button"
+          type="button"
+          id="fetch-with-header"
+        >
+          WITH HEADER
+        </button>
+        <p>- OR -</p>
+        <button
+          name="succsess"
+          class="fetch-button"
+          type="button"
+          id="fetch-without-header"
+        >
+          WITHOUT HEADER
+        </button>
+      </div>
+      <div class="display-container">
+        <div class="status" id="status-bar">status:</div>
+        <div class="display" id="display">
+          <p class="display-row" id="display-row-1"></p>
+          <p class="display-row" id="display-row-2"></p>
+          <p class="display-row" id="display-row-3"></p>
+          <p class="display-row" id="display-row-4"></p>
+          <p class="display-row" id="display-row-5"></p>
+          <p class="display-row" id="display-row-6"></p>
+        </div>
+      </div>
+      <div class="reset-container">
+        <button class="fetch-button reset-button" id="reset">RESET</button>
+      </div>
+    </div>
+  </body>
+</html>
