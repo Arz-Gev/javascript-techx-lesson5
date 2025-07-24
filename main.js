@@ -1,24 +1,21 @@
 import { Ui } from "./Ui.js";
-
+const api_url = "https://reqres.in/api/users?delay=1";
 let rows = document.querySelectorAll(".display-row");
 let fetchTrue = document.getElementById("fetch-with-header");
 let fetchFalse = document.getElementById("fetch-without-header");
 let reset = document.getElementById("reset");
-const api_url = "https://reqres.in/api/users?delay=1";
 let arrayOfPersons;
+let fetching = false;
+let header = { "x-api-key": "reqres-free-v1" };
 
 fetchTrue.addEventListener("click", (e) => {
   LogsWhenRequest();
-  ApiRequestHeader();
+  ApiRequest(header);
 });
 
 fetchFalse.addEventListener("click", (e) => {
   LogsWhenRequest();
-  try {
-    ApiRequestNoHeader();
-  } catch (error) {
-    console.log("ABOBA");
-  }
+  ApiRequest(header);
 });
 
 reset.addEventListener("click", (e) => {
@@ -34,29 +31,26 @@ function LogsWhenRequest() {
   console.log("Fetching users...");
 }
 
-function ApiRequestHeader() {
+function ApiRequest(headers) {
   setTimeout(() => {
     fetch(api_url, {
-      headers: { "x-api-key": "reqres-free-v1" },
+      headers,
     })
       .then((response) => response.json())
       .then((obj) => {
-        console.log(obj.data);
-
+        console.table(obj.data);
         arrayOfPersons = obj.data.map((user) => {
           return `${user.first_name}, ${user.last_name}`;
         });
-
         let i = 0;
         rows.forEach((row) => {
           row.textContent = `${arrayOfPersons[i++]}`;
         });
-
         Ui.Status(Ui.loaded);
         console.log("fetching succeed");
       })
       .catch((error) => console.error(error));
-  }, 1500);
+  }, 1000);
 }
 
 function ApiRequestNoHeader() {
